@@ -6,8 +6,8 @@ import json
 import urllib.request
 
 try:
-	# source = urllib.request.urlopen("https://www.twinthread.com/code-challenge/assets.txt", context = ssl._create_unverified_context())
-	source = open("assets.txt")
+	source = urllib.request.urlopen("https://www.twinthread.com/code-challenge/assets.txt", context = ssl._create_unverified_context())
+	# source = open("assets.txt")
 	db = json.load(source)
 	source.close()
 
@@ -30,7 +30,6 @@ try:
 	window = tk.Tk()
 	window.minsize(250, 0)
 	window.title("Home")
-
 
 	# layer 3
 	def asset_page(asset, origin, origin_details = None, original_origin = None):
@@ -60,9 +59,9 @@ try:
 			return
 		if isinstance(asset, int):
 			asset_id = asset
-			for each in db["assets"]:
-				if each["assetId"] == asset_id:
-					asset = each
+			for obj in db["assets"]:
+				if obj["assetId"] == asset_id:
+					asset = obj
 					break
 		else:
 			asset_id = asset["assetId"]
@@ -214,8 +213,8 @@ try:
 		listbox = tk.Listbox(search_results_page, selectmode = tk.BROWSE, width = 40)
 		listbox.pack()
 		listbox.bind('<Double-1>', lambda x: open_asset())
-		for i, each in enumerate(results):
-			listbox.insert(i, each["name"])
+		for i, res in enumerate(results):
+			listbox.insert(i, res["name"])
 
 
 	# layer 1
@@ -304,7 +303,6 @@ try:
 		listbox.bind('<Double-1>', lambda x: open_class())
 		for i, each in enumerate(classes.values()):
 			listbox.insert(i, each["name"])
-
 
 	# layer 0
 	def layer_0_home():
