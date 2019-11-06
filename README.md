@@ -3,6 +3,7 @@
 This app was built with Python and Tkinter. It offers a simple GUI for browsing the provided JSON dataset.
 
 #### _approx. completion time 3h 45m_
+GitHub post and readme.md took additional 25m.
 
 ## How to run
 
