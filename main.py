@@ -7,7 +7,6 @@ import urllib.request
 
 try:
 	source = urllib.request.urlopen("https://www.twinthread.com/code-challenge/assets.txt", context = ssl._create_unverified_context())
-	# source = open("assets.txt")
 	db = json.load(source)
 	source.close()
 
@@ -169,7 +168,7 @@ try:
 		else:
 			tk.Button(class_detail_page, text = "Go home", command = layer_0_home).pack()
 
-		tk.Label(class_detail_page, text = "name: " + class_obj["name"]).pack()   # TODO : bold
+		tk.Label(class_detail_page, text = "name: " + class_obj["name"]).pack()
 		tk.Label(class_detail_page, text = "ID: " + str(class_id)).pack()
 		tk.Label(class_detail_page, text = "drill: " + class_obj["drill"]).pack()
 		tk.Label(class_detail_page, text = "assets in this class:").pack()
@@ -316,7 +315,6 @@ try:
 		home_page.pack()
 		window.title("Home")
 
-		# tk.Label(home_page, text = "Home", underline = 1, font = ('bold')).pack()                      # TODO: bold font
 		tk.Button(home_page, text = "Search", command = layer_1_search).pack()
 		tk.Button(home_page, text = "Critical items", command = layer_1_critical).pack()
 		tk.Button(home_page, text = "View classes", command = layer_1_classes).pack()
