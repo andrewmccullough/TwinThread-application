@@ -1,7 +1,8 @@
 # TwinThread application
 
 This app was built with Python and Tkinter. It offers a simple GUI for browsing the provided JSON dataset.
-_approx. completion time 4h 10m_
+
+#### _approx. completion time 4h 10m_
 
 ## How to run
 
