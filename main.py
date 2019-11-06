@@ -207,7 +207,7 @@ try:
 
 		results = []
 		for asset in db["assets"]:
-			if query in asset["name"] or query in asset["description"] or query in str(asset["assetId"]):
+			if query.lower() in asset["name"].lower() or query in asset["description"].lower() or query in str(asset["assetId"]):
 				results.append(asset)
 
 		listbox = tk.Listbox(search_results_page, selectmode = tk.BROWSE, width = 40)
