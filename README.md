@@ -11,7 +11,7 @@ On Mac, navigate to the proper directory using Terminal and run the command `pyt
 ## Features
 
 ### Search
-The search feature searches for the provided query as a substring in the name, description, or ID of an asset. As such, wildcard searches can be done simply by entering the given substring -- don't both to include an asterisk.
+The search feature searches for the provided query as a substring in the name, description, or ID of an asset. As such, wildcard searches can be done simply by entering the given substring -- don't bother to include an asterisk. The search is case insensitive.
 
 ### Critical items
 View assets with a critical priority.
